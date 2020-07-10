@@ -1,0 +1,12 @@
+.container{
+    margin-top: 4%;
+}
+.card{
+    margin-bottom: 2%;
+}
+h3{
+    color: black;
+}
+h3.detail {
+    text-align: center;
+}
