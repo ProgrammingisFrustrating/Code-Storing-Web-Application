@@ -1,0 +1,17 @@
+{% extends 'post/base.html' %}
+{% block content%}
+{% load static %}
+<div class="container">
+    <h3 class="detail">{{ models.name }}</h3>
+    <p>{{models.desc}}</p>
+    <span class="badge badge-pill badge-primary">{{models.lang}}</span>
+    {%if models.status %}
+    <span class="badge badge-success">Completed</span>
+    {%else%}
+    <span class="badge badge-secondary">Pending</span>
+    {%endif%}
+    <a href="{% url 'updateTask' models.id %}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Update</a>
+    <a href="{% url 'deleteTask' models.id %}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">delete</a>
+    {{models.files}}
+</div>
+{% endblock %}
